@@ -6,21 +6,23 @@ import ("fmt"
 		)
 
 func main(){
-	img := multimedia.Imagen{}
-	aud := multimedia.Audio{}
-	vid := multimedia.Video{}
+	
 	cws:=  multimedia.ContenidoWeb{}//slice 
 	//mmi:= []multimediaInterface{}
 	
 	var op int
 	
 	for op != 5{
+	
+	
+	
 	fmt.Println("\n---------------------------------")
 	fmt.Println("1. Capturar Imagen \n2. Capturar Audio \n3. Capturar Video \n4. Mostrar \n5. Salir")
 	fmt.Printf("- Opcion: ")
 	fmt.Scan(&op)
 	switch op{
 		case 1:{
+			img := multimedia.Imagen{}
 			fmt.Printf("\nImagen, titulo: ")
 			fmt.Scan(&img.Titulo)
 			fmt.Printf("Imagen, formato: ")
@@ -37,6 +39,7 @@ func main(){
 
 		}
 		case 2:{
+			aud := multimedia.Audio{}
 			fmt.Printf("\nAudio, titulo: ")
 			fmt.Scan(&aud.Titulo)
 			fmt.Printf("Audio, formato: ")
@@ -49,6 +52,7 @@ func main(){
 			
 		}
 		case 3:{
+			vid := multimedia.Video{}
 			fmt.Printf("\nVideo, titulo: ")
 			fmt.Scan(&vid.Titulo)
 			fmt.Printf("Video, formato: ")
